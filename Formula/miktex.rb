@@ -3,17 +3,51 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
 class Miktex < Formula
-  desc "MiKTeX - an implementation of TeX & Friends"
+  desc "An implementation of TeX & Friends"
   homepage "https://miktex.org"
   url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6300.tar.xz"
   sha256 "5ad6bc697ef2c33a4e87937d01e216f13fa5ed0ee4c6845e8c5da312b8c96ec3"
 
   depends_on "cmake" => :build
+  depends_on "dos2unix" => :build
+  depends_on "fop" => :build
+  depends_on "pkg-config" => :build
+  depends_on "pandoc" => :build
 
+  depends_on "apr"
+  depends_on "apr-util"
+  depends_on "cairo"
+  depends_on "fontconfig"
+  depends_on "freetype"
+  depends_on "fribidi"
+  depends_on "gd"
+  depends_on "glib"
+  depends_on "gmp"
+  depends_on "graphite2"
+  depends_on "harfbuzz"
+  depends_on "hunspell"
+  depends_on "icu4c"
+  depends_on "jpeg"
+  depends_on "libffi"
+  depends_on "libpng"
+  depends_on "libtiff"
+  depends_on "libzzip"
+  depends_on "log4cxx"
+  depends_on "mpfr"
+  depends_on "openssl"
+  depends_on "pixman"
+  depends_on "poppler"
+  depends_on "popt"
+  depends_on "potrace"
+  depends_on "uriparser"
+  depends_on "xz"
+
+  needs :cxx14
+  
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
 
-    system "cmake", ".", *std_cmake_args
+    system "cmake", ".", "-DUSE_SYSTEM_MSPACK=FALSE", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
   end
 
