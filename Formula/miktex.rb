@@ -48,8 +48,10 @@ class Miktex < Formula
     # ENV.deparallelize  # if your formula fails when building in parallel
     ENV.deparallelize
 
-    system "cmake", ".", "-DUSE_SYSTEM_MSPACK=FALSE", *std_cmake_args
-    system "make", "install" # if this fails, try separate make/make install steps
+    mkdir "build" do
+      system "cmake", "..", "-DUSE_SYSTEM_MSPACK=FALSE", *std_cmake_args
+      system "make", "install"
+    end
   end
 
   test do
