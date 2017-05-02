@@ -50,7 +50,7 @@ class Miktex < Formula
     ENV.deparallelize
 
     mkdir "build" do
-      system "cmake", "..", "-DUSE_SYSTEM_MSPACK=FALSE", *std_cmake_args
+      system "cmake", "..", *std_cmake_args
       system "make", "install"
     end
   end
