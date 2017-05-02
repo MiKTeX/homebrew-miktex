@@ -7,6 +7,7 @@ class Miktex < Formula
   homepage "https://miktex.org"
   url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6300.tar.xz"
   sha256 "5ad6bc697ef2c33a4e87937d01e216f13fa5ed0ee4c6845e8c5da312b8c96ec3"
+  head "https://github.com/MiKTeX/miktex.git", :branch => "next"
 
   depends_on "cmake" => :build
   depends_on "dos2unix" => :build
