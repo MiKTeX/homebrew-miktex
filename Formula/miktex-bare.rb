@@ -59,6 +59,24 @@ class MiktexBare < Formula
     end
   end
 
+  def post_install
+    system "#{bin}/initexmf",
+           "--admin",
+           "--disable-installer",
+           "--set-config-value=[MPM]AutoAdmin=t",
+           "--set-config-value=[MPM]AutoInstall=t"
+  end
+
+  def caveats
+    msg = <<-EOS.undent
+      A bare MiKTeX installation has been set up.
+
+      You can upgrade to a basic MiKTeX installation by running
+        mpm --admin --package-level=basic --upgrade
+    EOS
+    msg
+  end
+
   test do
     # `test do` will create, run in and delete a temporary directory.
     #
@@ -69,6 +87,7 @@ class MiktexBare < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "#{bin}/initexmf", "--report"
+    system "#{bin}/initexmf --report >> report.txt"
+    assert_match /^MiKTeX: 2\.9/, File.read("report.txt")
   end
 end
