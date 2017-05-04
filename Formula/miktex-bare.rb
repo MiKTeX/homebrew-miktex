@@ -29,7 +29,7 @@ class MiktexBare < Formula
   depends_on "glib"
   depends_on "gmp"
   depends_on "graphite2"
-  depends_on "harfbuzz"
+  depends_on "harfbuzz" => "with-graphite2"
   depends_on "hunspell"
   depends_on "icu4c"
   depends_on "jpeg"
