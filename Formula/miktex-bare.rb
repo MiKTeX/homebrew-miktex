@@ -54,17 +54,20 @@ class MiktexBare < Formula
     ENV.deparallelize
 
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..",
+             "-DMIKTEX_SYSTEM_VAR_CACHE_DIR=#{var}/cache",
+             "-DMIKTEX_SYSTEM_VAR_LIB_DIR=#{var}/lib",
+             *std_cmake_args
       system "make", "install"
     end
   end
 
   def post_install
-    system "#{bin}/initexmf",
-           "--admin",
-           "--disable-installer",
-           "--set-config-value=[MPM]AutoAdmin=t",
-           "--set-config-value=[MPM]AutoInstall=t"
+#    system "#{bin}/initexmf",
+#           "--admin",
+#           "--disable-installer",
+#           "--set-config-value=[MPM]AutoAdmin=t",
+#           "--set-config-value=[MPM]AutoInstall=t"
   end
 
   def caveats
