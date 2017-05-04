@@ -55,6 +55,8 @@ class MiktexBare < Formula
 
     mkdir "build" do
       system "cmake", "..",
+             "-DMIKTEX_MPM_AUTO_ADMIN=t",
+             "-DMIKTEX_MPM_AUTO_INSTALL=t",
              "-DMIKTEX_SYSTEM_VAR_CACHE_DIR=#{var}/cache",
              "-DMIKTEX_SYSTEM_VAR_LIB_DIR=#{var}/lib",
              *std_cmake_args
@@ -62,20 +64,16 @@ class MiktexBare < Formula
     end
   end
 
-  def post_install
-#    system "#{bin}/initexmf",
-#           "--admin",
-#           "--disable-installer",
-#           "--set-config-value=[MPM]AutoAdmin=t",
-#           "--set-config-value=[MPM]AutoInstall=t"
-  end
-
   def caveats
     msg = <<-EOS.undent
-      A bare MiKTeX installation has been set up.
+      A bare MiKTeX installation has been set up in #{prefix}.
+      Run 'initexmf --report' to view the installation details.
+
+      MiKTeX is configured to install missing packages automatically for all users.
+      Make sure that you have write privileges for #{prefix}.
 
       You can upgrade to a basic MiKTeX installation by running
-        mpm --admin --package-level=basic --upgrade
+        mpm --package-level=basic --upgrade
     EOS
     msg
   end
