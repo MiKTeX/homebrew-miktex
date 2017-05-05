@@ -73,7 +73,7 @@ class MiktexBare < Formula
       Make sure that you have write privileges for #{prefix}.
 
       You can upgrade to a basic MiKTeX installation by running
-        mpm --package-level=basic --upgrade
+        mpm --admin --package-level=basic --upgrade
     EOS
     msg
   end
