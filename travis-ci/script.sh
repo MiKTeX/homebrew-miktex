@@ -2,8 +2,15 @@
 
 set -ev
 
+if [ "${MIKTEX_NEXT}" = "yes" ]; then
+    installoptions=--devel
+    versionname=devel
+else
+    versionname=stable
+fi
+
 brew tap miktex/miktex "${TRAVIS_BUILD_DIR}"
 brew install jq
-brew info --json=v1 miktex-bare | jq .
-brew install --verbose --build-bottle --devel miktex-bare
-brew bottle --verbose miktex-bare
+echo Installing MiKTeX version: `brew info --json=v1 miktex-bare | jq ".[0].versions.${versionname}"`
+brew install ${installoptions} miktex-bare
+initexmf --report
