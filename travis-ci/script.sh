@@ -2,5 +2,6 @@
 
 set -ev
 
-brew install --verbose --build-bottle --devel "${TRAVIS_BUILD_DIR}/Formula/miktex-bare.rb"
-brew bottle --verbose "${TRAVIS_BUILD_DIR}/Formula/miktex-bare.rb"
+brew tap miktex/miktex "${TRAVIS_BUILD_DIR}"
+brew install --verbose --build-bottle --devel miktex-bare
+brew bottle --verbose miktex-bare
