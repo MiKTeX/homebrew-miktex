@@ -2,4 +2,4 @@
 
 set -ev
 
-brew install "${TRAVIS_BUILD_DIR}/Formula/miktex-bare.rb"
+brew install "${TRAVIS_BUILD_DIR}/Formula/miktex-bare.rb" --verbose --devel
