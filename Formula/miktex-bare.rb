@@ -51,7 +51,6 @@ class MiktexBare < Formula
   
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    ENV.deparallelize
 
     mkdir "build" do
       system "cmake", "..",
