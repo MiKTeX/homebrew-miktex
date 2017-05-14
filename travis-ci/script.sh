@@ -14,3 +14,6 @@ brew install jq
 echo Installing MiKTeX version: `brew info --json=v1 miktex-bare | jq ".[0].versions.${versionname}"`
 brew install --verbose ${installoptions} miktex-bare
 initexmf --report
+
+. "${TRAVIS_BUILD_DIR}/travis-ci/_install.sh"
+. "${TRAVIS_BUILD_DIR}/travis-ci/_test.sh"
