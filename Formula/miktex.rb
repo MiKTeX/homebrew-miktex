@@ -19,14 +19,11 @@ class Miktex < Formula
   depends_on "pkg-config" => :build
   depends_on "pandoc" => :build
 
-  depends_on "apr"
-  depends_on "apr-util"
   depends_on "cairo"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "fribidi"
   depends_on "gd"
-  depends_on "glib"
   depends_on "gmp"
   depends_on "graphite2"
   depends_on "harfbuzz" => "with-graphite2"
