@@ -47,6 +47,7 @@ class Miktex < Formula
       system "cmake", "..",
              "-DMIKTEX_MPM_AUTO_ADMIN=t",
              "-DMIKTEX_MPM_AUTO_INSTALL=t",
+             "-DMIKTEX_SYSTEM_ETC_FONTS_CONFD_DIR=#{etc}/fonts/conf.d",
              "-DMIKTEX_SYSTEM_VAR_CACHE_DIR=#{var}/cache",
              "-DMIKTEX_SYSTEM_VAR_LIB_DIR=#{var}/lib",
              *std_cmake_args
