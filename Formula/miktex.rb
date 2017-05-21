@@ -15,6 +15,8 @@ class Miktex < Formula
   depends_on "pkg-config" => :build
   depends_on "pandoc" => :build
 
+  #depends_on "icu4c" => :recommended
+  
   depends_on "cairo"
   depends_on "fontconfig"
   depends_on "freetype"
@@ -23,9 +25,7 @@ class Miktex < Formula
   depends_on "gmp"
   depends_on "graphite2"
   depends_on "hunspell"
-  depends_on "icu4c"
   depends_on "jpeg"
-  depends_on "libffi"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libzzip"
