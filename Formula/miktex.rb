@@ -40,7 +40,7 @@ class Miktex < Formula
   depends_on "xz"
 
   needs :cxx14
-  
+
   def install
     mkdir "build" do
       system "cmake", "..",
