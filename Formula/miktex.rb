@@ -15,7 +15,7 @@ class Miktex < Formula
   depends_on "pkg-config" => :build
   depends_on "pandoc" => :build
 
-  #depends_on "icu4c" => :recommended
+  depends_on "icu4c"
   
   depends_on "cairo"
   depends_on "fontconfig"
