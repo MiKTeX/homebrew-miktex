@@ -9,6 +9,13 @@ class Miktex < Formula
     version "2.9-next"
   end
 
+  bottle do
+    root_url "https://dl.bintray.com/miktex/bottles/"
+    sha256 "d651052bc5bc81cbc1e51f87e2afeb4ddb292d04d4ba7e28bc6368f50a98aee7" => :sierra
+    sha256 "dc1a6ff2d897dfe89f561c0251b170615176d171b16d9363e683edd55eafdf1a" => :el_capitan
+    sha256 "3de88963cd3f110263faf32825ca473579724b4149364a9a6044f4c74b818a65" => :yosemite
+  end
+
   depends_on "cmake" => :build
   depends_on "dos2unix" => :build
   depends_on "fop" => :build
