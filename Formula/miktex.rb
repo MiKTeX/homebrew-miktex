@@ -77,6 +77,6 @@ class Miktex < Formula
 
   test do
     system "#{bin}/initexmf --report >> report.txt"
-    assert_match /^MiKTeX: 2\.9/, File.read("report.txt")
+    assert_match /^MiKTeX: MiKTeX 2\.9/, File.read("report.txt")
   end
 end
