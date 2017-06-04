@@ -9,12 +9,13 @@ class Miktex < Formula
     version "2.9-next"
   end
 
-#  bottle do
-#    root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
-#    sha256 "45351966a87923930dd20b9f8ab69d0fc8ec87b851c0482bce90ab2b86b8104b" => :sierra
-#    sha256 "4f2f7b17f46e9e1ea4807e4c992a6c8eb52083374b76b735cf725a91692f7f6d" => :el_capitan
-#    sha256 "b562c5f665f8f1d6189911cbf5c408515d72d8872d78a9c73b0a596cb85ccac3" => :yosemite
-#  end
+  bottle do
+    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
+    root_url "https://dl.bintray.com/miktex/bottles"
+    sha256 "cfbd948d4653dfc6777b9ce722efbe9b36dfc69c81bdb36722fad9ed4e2aba50" => :sierra
+    sha256 "74129fb0c89abbfca9d387df594e5576012be9e9bc8dfc4330dd8c49d566d55c" => :el_capitan
+    sha256 "4196b805e4fd4a3e5eb96055b514a60f326fa273a7ebf2cc72338af937a4b11a" => :yosemite
+  end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
