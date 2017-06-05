@@ -10,8 +10,8 @@ class Miktex < Formula
   end
 
   bottle do
-    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
-    root_url "https://dl.bintray.com/miktex/bottles"
+    root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
+    #root_url "https://dl.bintray.com/miktex/bottles"
     sha256 "cfbd948d4653dfc6777b9ce722efbe9b36dfc69c81bdb36722fad9ed4e2aba50" => :sierra
     sha256 "74129fb0c89abbfca9d387df594e5576012be9e9bc8dfc4330dd8c49d566d55c" => :el_capitan
     sha256 "4196b805e4fd4a3e5eb96055b514a60f326fa273a7ebf2cc72338af937a4b11a" => :yosemite
