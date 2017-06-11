@@ -1,7 +1,7 @@
 # Check list
 
 - [ ] Ran `brew update`
-- [ ] Ran `brew outdated miktex || brew upgrade miktex
+- [ ] Ran `brew outdated miktex || brew upgrade miktex`
 - [ ] Checked the log files in `/usr/local/var/miktex-texmf/miktex/log`
 
 # Bug report
