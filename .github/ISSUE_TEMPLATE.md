@@ -2,7 +2,8 @@
 
 - [ ] Ran `brew update`
 - [ ] Ran `brew outdated miktex || brew upgrade miktex`
-- [ ] Checked the log files in `/usr/local/var/miktex-texmf/miktex/log`
+- [ ] Checked the log files in `~/.miktex/data/miktex/log`
+- [ ] Checked the log files in `/usr/local/var/cache/miktex-texmf/miktex/log`
 
 # Bug report
 
@@ -16,4 +17,4 @@ _please remove this section if this is not a bug report_
 
 # Request for enhancment
 
-_please remove this section if it is not applicable_
+_please remove this section if this is not a request for enhancement_
