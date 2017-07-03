@@ -54,6 +54,7 @@ class Miktex < Formula
              "-DMIKTEX_SYSTEM_ETC_FONTS_CONFD_DIR=#{etc}/fonts/conf.d",
              "-DMIKTEX_SYSTEM_VAR_CACHE_DIR=#{var}/cache",
              "-DMIKTEX_SYSTEM_VAR_LIB_DIR=#{var}/lib",
+             "-DMIKTEX_SYSTEM_VAR_LOG_DIR=#{var}/log",
              *std_cmake_args
       system "make", "install"
     end
