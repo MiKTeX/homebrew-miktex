@@ -1,21 +1,22 @@
 class Miktex < Formula
   desc "TeX & Friends"
   homepage "https://miktex.org/"
-  url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6400.tar.xz"
-  sha256 "9c1d8fc4a945354dc5904c51a520d5e9d2fb442290407daebd491236ae6d583a"
+#  url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6420.tar.xz"
+  url "https://dl.bintray.com/miktex/source/miktex-2.9.6420.tar.xz"
+  sha256 "5e683eb3d9780953b45b094d3fc7d4a01aa1f98d4ea827fce1c5b80a1f0662fa"
 
   devel do
     url "https://github.com/MiKTeX/miktex.git", :branch => "next"
     version "2.9-next"
   end
 
-  bottle do
-    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
-    root_url "https://dl.bintray.com/miktex/bottles"
-    sha256 "f49b7e8f1bec95e5914ea2d6e192cac623015a01d2a6b515607666f57ffb3aef" => :sierra
-    sha256 "b89618673b68a03ec52ee307a54c4b439ce26aff7fd480e9809914933a2eed06" => :el_capitan
-    sha256 "341da75bc0c7cc31aa29363fc527a80a3a7c0f0c61273274a8a59fd9c092912d" => :yosemite
-  end
+#  bottle do
+#    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
+#    root_url "https://dl.bintray.com/miktex/bottles"
+#    sha256 "f49b7e8f1bec95e5914ea2d6e192cac623015a01d2a6b515607666f57ffb3aef" => :sierra
+#    sha256 "b89618673b68a03ec52ee307a54c4b439ce26aff7fd480e9809914933a2eed06" => :el_capitan
+#    sha256 "341da75bc0c7cc31aa29363fc527a80a3a7c0f0c61273274a8a59fd9c092912d" => :yosemite
+#  end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
