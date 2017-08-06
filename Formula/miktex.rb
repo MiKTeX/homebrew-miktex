@@ -13,9 +13,9 @@ class Miktex < Formula
   bottle do
     #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
     root_url "https://dl.bintray.com/miktex/bottles"
-    sha256 "https://dl.bintray.com/miktex/source/miktex-2.9.6420.tar.xz" => :sierra
-    sha256 "https://dl.bintray.com/miktex/source/miktex-2.9.6420.tar.xz" => :el_capitan
-    sha256 "https://dl.bintray.com/miktex/source/miktex-2.9.6420.tar.xz" => :yosemite
+    sha256 "cc6f5f577eca7b8b48e76953dcabe20642dd9376cf429927a025e3fdf13f2c78" => :sierra
+    sha256 "989f50f2f2265844e658d3b1c91d84dfd3ba66da9536142c08d1ef03ee0039ce" => :el_capitan
+    sha256 "b40ec2a4b4e2ec3a0cb31b347261e9e1d57861e6b534cc577774fb04980dd62a" => :yosemite
   end
 
   depends_on "cmake" => :build
