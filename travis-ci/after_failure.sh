@@ -8,5 +8,10 @@ fi
 
 if [ -d ~/.miktex/texmfs/data/miktex/log ]; then
     cd ~/.miktex/texmfs/data/miktex/log
-    grep FATAL *.log
+    cat *.log
+fi
+
+if [ -d /usr/local/var/log/miktex ]; then
+    cd /usr/local/var/log/miktex
+    cat *.log
 fi
