@@ -8,6 +8,5 @@ fi
 
 if [ -d ~/.miktex/texmfs/data/miktex/log ]; then
     cd ~/.miktex/texmfs/data/miktex/log
-    tar -cJf logs.tar.xz *.log
-    curl -sT logs.tar.xz chunk.io
+    grep FATAL *.log
 fi
