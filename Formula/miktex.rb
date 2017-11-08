@@ -1,23 +1,23 @@
 class Miktex < Formula
   desc "TeX & Friends"
   homepage "https://miktex.org/"
-  #url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6470.tar.xz"
-  url "https://dl.bintray.com/miktex/source/miktex-2.9.6481.tar.xz"
-  sha256 "e2e2261e3e69bcfba69afe3cc39ccadd23969c5de36d269f49d12b2ee7aa214b"
+  url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6500.tar.xz"
+  #url "https://dl.bintray.com/miktex/source/miktex-2.9.6481.tar.xz"
+  sha256 "cf9ebc03bafa8bf63f20b84579e1bdf86d95d4a32b881e012efc574069b4c5cb"
 
   devel do
     url "https://github.com/MiKTeX/miktex.git", :branch => "next"
     version "2.9-next"
   end
 
-  bottle do
-    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
-    root_url "https://dl.bintray.com/miktex/bottles"
-    #sha256 "" => :high_sierra
-    sha256 "560bbc5d7a62445ed5938c9f7691058ded39ffbad679d8948cd4afdb1dff7333" => :sierra
-    #sha256 "" => :el_capitan
-    #sha256 "" => :yosemite
-  end
+#  bottle do
+#    #root_url "https://miktex.org/download/ctan/systems/win32/miktex/setup/mac"
+#    root_url "https://dl.bintray.com/miktex/bottles"
+#    #sha256 "" => :high_sierra
+#    sha256 "560bbc5d7a62445ed5938c9f7691058ded39ffbad679d8948cd4afdb1dff7333" => :sierra
+#    #sha256 "" => :el_capitan
+#    #sha256 "" => :yosemite
+#  end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
