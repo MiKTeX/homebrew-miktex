@@ -6,8 +6,6 @@ matrix:
       osx_image: xcode9.1
     - os: osx
       osx_image: xcode8
-    - os: osx
-      osx_image: xcode6.4
 
 before_install: ./travis-ci/before_install.sh
 before_script: ./travis-ci/before_script.sh
