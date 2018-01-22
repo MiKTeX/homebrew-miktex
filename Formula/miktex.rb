@@ -62,7 +62,7 @@ class Miktex < Formula
   end
 
   def caveats
-    msg = <<-EOS.undent
+    msg = <<~EOS.undent
       A bare MiKTeX installation has been set up in #{prefix}.
       Run 'initexmf --report' to view the installation details.
 
