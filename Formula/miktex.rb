@@ -56,9 +56,6 @@ class Miktex < Formula
       A bare MiKTeX installation has been set up in #{prefix}.
       Run 'initexmf --report' to view the installation details.
 
-      MiKTeX is configured to install missing packages automatically for all users.
-      Make sure that you have write privileges for #{prefix}.
-
       You can upgrade to a basic MiKTeX installation by running
         mpm --admin --package-level=basic --upgrade
     EOS
