@@ -40,7 +40,6 @@ class Miktex < Formula
   def install
     mkdir "build" do
       system "cmake", "..",
-             "-DMIKTEX_MPM_AUTO_ADMIN=t",
              "-DMIKTEX_MPM_AUTO_INSTALL=t",
              "-DMIKTEX_SYSTEM_ETC_FONTS_CONFD_DIR=#{etc}/fonts/conf.d",
              "-DMIKTEX_SYSTEM_VAR_CACHE_DIR=#{var}/cache",
