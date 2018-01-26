@@ -4,6 +4,8 @@ class Miktex < Formula
   url "https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-2.9.6500.tar.xz"
   sha256 "cf9ebc03bafa8bf63f20b84579e1bdf86d95d4a32b881e012efc574069b4c5cb"
 
+  revision 1
+
   devel do
     url "https://github.com/MiKTeX/miktex.git", :branch => "next"
     version "2.9-next"
